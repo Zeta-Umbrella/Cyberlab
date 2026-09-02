@@ -1,0 +1,33 @@
+# Foothold is a file designed to be an inbox for my raw ideas. (the language may be in french)  
+
+---
+
+bon, je vais commencer.
+normalement je devrai commencer par... je sais pas vraiment.
+
+Des explications peut être ? genre un file qui explique comment ça va se passer
+---
+Peut-être préciser aussi que le but du repo n'est pas complètement de faire un guide genre :
+Etape 1 --> action
+Etape 2 --> action
+mais plutôt de faire comprendre au lecteur ce qu'il fait.
+---
+rajouter dans le README que c'est une approche à la fois offensive, défensive et administrative non ?
+---
+"Computers are very powerful - only to those who can apprehend them."
+La phrase est stylé, elle vient de moi.
+Un fichier qui pourrait expliquer comment, pourquoi, avec quoi, etc...
+Peut-être pas besoin de fournir un guide pour installer les vms ? 
+---
+Si, je souhaite que ce guide guide de A à Z.
+Alors, jpeux commencer comme ça :
+--> Introduction To Cyberlab
+Un folder SETTING UP
+          |____ Prerequisites.md
+          |____ Installation.md
+          |____ Foothold.md
+          |____ Kali_Attack.md
+          |____ Ubuntu_Server.md
+C'est déjà bien non ? 
+Je vais commencer par là. Je vais m'arrêter ici pour éviter de trop aller dans le théorique. Si il faut adapter après, je le ferai.
+---
