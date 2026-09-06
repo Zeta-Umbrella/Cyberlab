@@ -20,6 +20,8 @@
   "subnet4": [
     {
       "subnet": "192.168.123.0/24",
+      "_comment": "this file is not yet able in production. i didn't test it and somes values are not understood by me. routers, domain-name... i didn't spawned these yet to be able to configure them."
+      
       "pools": [ { "pool": "192.168.123.100 - 192.168.123.200" } ],
       "option-data": [
         {
@@ -34,8 +36,22 @@
           "name": "routers",
           "data": "127.0.0.1"
         }
-      ]
+      ],
+        
+        "_note": "je vais essayer des réservations. on verra ce que ça fait. (bon, j'ai même pas encore testé mon fichier pour devrai avant ça, mais bon."
+
+      "reservations": [
+        {
+            "hw-address": "de:ad:be:ef:00:00",
+            "ip-address": "192.168.123.100",
+            "hostname": "DOMAIN_EXPANSION",
+          "_other-note": "bro... be serious. change this name ;)"
+        }
+        
     }
+    
   ]
+  
 }
+  
 }
