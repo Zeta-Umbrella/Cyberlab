@@ -6,7 +6,7 @@
 
   "valid-lifetime": 86400,
   "renew-timer": 43200,
-  "rebind-timer": 75 600,
+  "rebind-timer": 75600,
 
   "authoritative": true,
 
@@ -14,7 +14,7 @@
     "type": "memfile",
     "persist": "true",
     "name": "/var/lib/kea/kea/leases4.csv",
-    "lfc-interval": 3600,  
+    "lfc-interval": 3600  
   }, 
 
   "subnet4": [
@@ -32,7 +32,7 @@
         },
         {
           "name": "routers",
-          "data": "127.0.0.1
+          "data": "127.0.0.1"
         }
       ]
     }
