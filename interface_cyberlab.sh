@@ -18,10 +18,14 @@ function verify_dev () {
 }
 
 function set_dev () {
-  mac=$(ip link show $dev | awk '/link\/ether/ {print $2}')
-  echo -e "[Match]\nMACAddress=$mac\n[Link]\nName=$dev" | cat > /etc/systemd/network/10-lan0.link
-  sudo systemctl restart systemd-udevd
 
+  mac=$(ip link show $dev | awk '/link\/ether/ {print $2}')
+  
+  echo -e "[Match]\nMACAddress=$mac\n[Link]\nName=$dev" | cat > /etc/systemd/network/10-lan0.link
+  
+  sudo systemctl restart systemd-udevd
+  
+# verify if $dev is corresponding to the name cyberlab
   if [[ $(ip link show $dev | awk '{print $2}')
   
   
