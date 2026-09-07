@@ -20,7 +20,6 @@ function verify_dev_name () {
   fi
 }
 
-
 function set_dev_name () {
 
   mac=$(ip link show $dev | awk '/link\/ether/ {print $2}')
@@ -34,7 +33,7 @@ function set_dev_name () {
     echo -e "The device is now set to 'cyberlab'"
     return 0
   fi
-
+}
 
 
     
