@@ -12,7 +12,6 @@ function verify_dev_name () {
   if [[ $dev -eq "cyberlab" ]] ; then
     echo -e "\nThere is already a device named cyberlab\n"
     return 1
-  fi
   
   else if  [[ $dev -n ]] ; then
     echo -e "\nDevice seem to be prepared for configuration\n"
@@ -23,6 +22,7 @@ function verify_dev_name () {
 function set_dev_name () {
 
   mac=$(ip link show $dev | awk '/link\/ether/ {print $2}')
+  dev='cyberlab'
   
   echo -e "[Match]\nMACAddress=$mac\n[Link]\nName=$dev" | cat > /etc/systemd/network/10-lan0.link
   
@@ -32,6 +32,9 @@ function set_dev_name () {
   if [[ $(ip link show $dev | awk '{print $2}' | grep cyberlab | sed 's/://g' | sed 's/\n//g' ) -eq 'cyberlab' ]] ; then
     echo -e "The device is now set to 'cyberlab'"
     return 0
+
+  else 
+    echo -e "\nThere is a problem. The device is not named 'cyberlab'\n"
   fi
 }
 
