@@ -24,7 +24,7 @@ function set_dev_name () {
   mac=$(ip link show $dev | awk '/link\/ether/ {print $2}')
   dev='cyberlab'
   
-  echo -e "[Match]\nMACAddress=$mac\n[Link]\nName=$dev" | cat > /etc/systemd/network/10-lan0.link
+  echo -e "[Match]\nMACAddress=$mac\n\n[Link]\nName=$dev" | cat > /etc/systemd/network/10-cyberlab.link
   
   sudo systemctl restart systemd-udevd
   
@@ -37,6 +37,42 @@ function set_dev_name () {
     echo -e "\nThere is a problem. The device is not named 'cyberlab'\n"
   fi
 }
+
+########################################################JAI OUBLIE QUE CETTE PARTIE NEST RESERVEE QUA LA UBUNTU########################################################################
+
+function set_dev_ip () {
+  ip=$(ip addr show cyberlab | grep inet | grep -v inet6 | awk '/inet/ {print $2}')
+  
+  echo -e "[Match]\nName=lan0\n\n[Network]\nAddress=99.99.99.99/24" | cat > /etc/systemd/network/20-cyberlab.link
+  # à ajouter plus tard : \nGateway=192.168.1.1\nDNS=1.1.1.1\nDNS=8.8.8.8
+  sudo systemctl restart systemd-networkd
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
     
